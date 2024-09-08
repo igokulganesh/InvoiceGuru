@@ -3,15 +3,18 @@ package com.invoiceguru.backend.party;
 import java.math.BigDecimal;
 
 import com.invoiceguru.backend.address.Address;
+import com.invoiceguru.backend.company.Company;
 
 import jakarta.persistence.CascadeType;
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.EnumType;
 import jakarta.persistence.Enumerated;
+import jakarta.persistence.FetchType;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.Id;
 import jakarta.persistence.JoinColumn;
+import jakarta.persistence.ManyToOne;
 import jakarta.persistence.OneToOne;
 
 @Entity
@@ -38,6 +41,10 @@ public class Party {
     @Enumerated(value = EnumType.STRING)
     private GstType gstType;
 
+    @ManyToOne(fetch = FetchType.LAZY)
+    @JoinColumn(name = "company_id", referencedColumnName = "id")
+    private Company company;
+
     // Constructors
     public Party() {
         this.gstType = GstType.unregistered;
@@ -45,7 +52,7 @@ public class Party {
     }
 
     public Party(Long id, String name, Role role, Address address, BigDecimal outstandingAmount, String gstin,
-            GstType gstType) {
+            GstType gstType, Company company) {
         this.id = id;
         this.name = name;
         this.role = role;
@@ -53,6 +60,7 @@ public class Party {
         this.outstandingAmount = outstandingAmount;
         this.gstin = gstin;
         this.gstType = gstType;
+        this.company = company;
     }
 
     // Enums
@@ -130,5 +138,13 @@ public class Party {
 
     public void setGstType(GstType gstType) {
         this.gstType = gstType;
+    }
+
+    public Company getCompany() {
+        return company;
+    }
+
+    public void setCompany(Company company) {
+        this.company = company;
     }
 }

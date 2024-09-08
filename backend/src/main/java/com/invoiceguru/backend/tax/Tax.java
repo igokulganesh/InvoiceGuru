@@ -2,10 +2,14 @@ package com.invoiceguru.backend.tax;
 
 import java.math.BigDecimal;
 
+import com.invoiceguru.backend.company.Company;
+
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.Id;
+import jakarta.persistence.JoinColumn;
+import jakarta.persistence.ManyToOne;
 
 @Entity
 public class Tax {
@@ -14,11 +18,22 @@ public class Tax {
     private Long id;
     private String name;
 
+    @ManyToOne
+    @JoinColumn(name = "company_id", nullable = true)
+    private Company company;
+
     @Column(precision = 5, scale = 2)
     private BigDecimal rate;
 
     // Constructors
     public Tax() {
+    }
+
+    public Tax(Long id, String name, BigDecimal rate, Company company) {
+        this.id = id;
+        this.name = name;
+        this.company = company;
+        this.rate = rate;
     }
 
     public Tax(Long id, String name, BigDecimal rate) {
@@ -60,5 +75,13 @@ public class Tax {
 
     public void setRate(BigDecimal rate) {
         this.rate = rate;
+    }
+
+    public Company getCompany() {
+        return company;
+    }
+
+    public void setCompany(Company company) {
+        this.company = company;
     }
 }

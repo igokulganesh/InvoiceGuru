@@ -1,9 +1,13 @@
 package com.invoiceguru.backend.unit;
 
+import com.invoiceguru.backend.company.Company;
+
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.Id;
+import jakarta.persistence.JoinColumn;
+import jakarta.persistence.ManyToOne;
 
 /* Unit of Measurements */
 @Entity
@@ -15,6 +19,10 @@ public class Unit {
     @Column(nullable = false, unique = true)
     private String name;
     private Boolean isWhole;
+
+    @ManyToOne
+    @JoinColumn(name = "company_id", nullable = true)
+    private Company company;
 
     // Constructors
     public Unit() {
@@ -29,6 +37,13 @@ public class Unit {
     public Unit(String name, Boolean isWhole) {
         this.name = name;
         this.isWhole = isWhole;
+    }
+
+    public Unit(Long id, String name, Boolean isWhole, Company company) {
+        this.id = id;
+        this.name = name;
+        this.isWhole = isWhole;
+        this.company = company;
     }
 
     @Override
@@ -59,5 +74,13 @@ public class Unit {
 
     public void setIsWhole(Boolean isWhole) {
         this.isWhole = isWhole;
+    }
+
+    public Company getCompany() {
+        return company;
+    }
+
+    public void setCompany(Company company) {
+        this.company = company;
     }
 }
