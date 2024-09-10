@@ -1,4 +1,4 @@
-package com.invoiceguru.backend.company;
+package com.invoiceguru.backend.services.company;
 
 import java.util.List;
 import java.util.Optional;

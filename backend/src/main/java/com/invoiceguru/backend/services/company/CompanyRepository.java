@@ -1,9 +1,9 @@
-package com.invoiceguru.backend.tax;
+package com.invoiceguru.backend.services.company;
 
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 
 @Repository
-public interface TaxRepository extends JpaRepository<Tax, Long> {
+public interface CompanyRepository extends JpaRepository<Company, Long> {
 
 }

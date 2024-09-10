@@ -1,4 +1,4 @@
-package com.invoiceguru.backend.unit;
+package com.invoiceguru.backend.services.unit;
 
 import org.springframework.stereotype.Component;
 

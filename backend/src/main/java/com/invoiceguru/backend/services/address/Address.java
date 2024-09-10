@@ -1,4 +1,4 @@
-package com.invoiceguru.backend.address;
+package com.invoiceguru.backend.services.address;
 
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;

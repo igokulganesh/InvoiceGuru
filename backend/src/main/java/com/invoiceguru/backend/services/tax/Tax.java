@@ -1,8 +1,8 @@
-package com.invoiceguru.backend.tax;
+package com.invoiceguru.backend.services.tax;
 
 import java.math.BigDecimal;
 
-import com.invoiceguru.backend.company.Company;
+import com.invoiceguru.backend.services.company.Company;
 
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;

@@ -1,6 +1,6 @@
-package com.invoiceguru.backend.company;
+package com.invoiceguru.backend.services.company;
 
-import com.invoiceguru.backend.address.Address;
+import com.invoiceguru.backend.services.address.Address;
 
 import jakarta.persistence.CascadeType;
 import jakarta.persistence.Column;

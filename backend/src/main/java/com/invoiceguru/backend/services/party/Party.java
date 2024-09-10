@@ -1,9 +1,9 @@
-package com.invoiceguru.backend.party;
+package com.invoiceguru.backend.services.party;
 
 import java.math.BigDecimal;
 
-import com.invoiceguru.backend.address.Address;
-import com.invoiceguru.backend.company.Company;
+import com.invoiceguru.backend.services.address.Address;
+import com.invoiceguru.backend.services.company.Company;
 
 import jakarta.persistence.CascadeType;
 import jakarta.persistence.Column;

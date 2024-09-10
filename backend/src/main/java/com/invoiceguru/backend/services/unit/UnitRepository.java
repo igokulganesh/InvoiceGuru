@@ -1,4 +1,4 @@
-package com.invoiceguru.backend.unit;
+package com.invoiceguru.backend.services.unit;
 
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;

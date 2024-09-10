@@ -1,4 +1,4 @@
-package com.invoiceguru.backend.tax;
+package com.invoiceguru.backend.services.tax;
 
 import java.math.BigDecimal;
 

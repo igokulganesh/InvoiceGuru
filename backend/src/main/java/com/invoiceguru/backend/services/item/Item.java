@@ -1,10 +1,10 @@
-package com.invoiceguru.backend.item;
+package com.invoiceguru.backend.services.item;
 
 import java.math.BigDecimal;
 
-import com.invoiceguru.backend.company.Company;
-import com.invoiceguru.backend.tax.Tax;
-import com.invoiceguru.backend.unit.Unit;
+import com.invoiceguru.backend.services.company.Company;
+import com.invoiceguru.backend.services.tax.Tax;
+import com.invoiceguru.backend.services.unit.Unit;
 
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;

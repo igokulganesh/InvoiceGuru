@@ -1,6 +1,6 @@
-package com.invoiceguru.backend.unit;
+package com.invoiceguru.backend.services.unit;
 
-import com.invoiceguru.backend.company.Company;
+import com.invoiceguru.backend.services.company.Company;
 
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
