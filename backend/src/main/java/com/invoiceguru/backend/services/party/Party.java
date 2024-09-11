@@ -2,6 +2,7 @@ package com.invoiceguru.backend.services.party;
 
 import java.math.BigDecimal;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.invoiceguru.backend.services.address.Address;
 import com.invoiceguru.backend.services.company.Company;
 
@@ -41,6 +42,7 @@ public class Party {
     @Enumerated(value = EnumType.STRING)
     private GstType gstType;
 
+    @JsonIgnore
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "company_id", referencedColumnName = "id")
     private Company company;

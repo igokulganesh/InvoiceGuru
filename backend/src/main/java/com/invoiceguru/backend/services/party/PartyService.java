@@ -47,7 +47,7 @@ public class PartyService {
                 .orElseThrow(() -> new ResourceNotFoundException("Party not found with ID: " + partyId));
 
         if (!party.getCompany().getId().equals(companyId)) {
-            throw new UnauthorizedException("Not authorized to view this party");
+            throw new UnauthorizedException("Not authorized to update this party");
         }
 
         if (!party.getId().equals(partyInfo.getId())) {

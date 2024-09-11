@@ -2,6 +2,7 @@ package com.invoiceguru.backend.services.item;
 
 import java.math.BigDecimal;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.invoiceguru.backend.services.company.Company;
 import com.invoiceguru.backend.services.tax.Tax;
 import com.invoiceguru.backend.services.unit.Unit;
@@ -33,6 +34,7 @@ public class Item {
 
     private String description;
 
+    @JsonIgnore
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "company_id", referencedColumnName = "id")
     private Company company;
@@ -147,5 +149,4 @@ public class Item {
     public void setTax(Tax tax) {
         this.tax = tax;
     }
-
 }
