@@ -9,10 +9,10 @@
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
 	<groupId>com.invoiceguru</groupId>
-	<artifactId>backend</artifactId>
+	<artifactId>app</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<name>backend</name>
-	<description>Backend for InvoiceGuru</description>
+	<name>App</name>
+	<description>InvoiceGuru Application</description>
 	<url/>
 	<licenses>
 		<license/>
