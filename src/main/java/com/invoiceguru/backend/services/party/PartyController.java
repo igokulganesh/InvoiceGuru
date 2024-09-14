@@ -51,4 +51,10 @@ public class PartyController {
         partyService.deleteParty(companyId, partyId);
         return ResponseEntity.noContent().build();
     }
+
+    // Customer
+
+    // Supplier
+
+    // Invoices
 }

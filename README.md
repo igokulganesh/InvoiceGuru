@@ -1,1 +1,1 @@
-# InvoiceGuru
+# Invoice Guru
