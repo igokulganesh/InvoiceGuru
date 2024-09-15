@@ -1,1 +1,1 @@
-# Invoice Guru Frontend
+# Invoice Pro Frontend

@@ -1,1 +1,1 @@
-# Invoice Guru
+# Invoice Pro
